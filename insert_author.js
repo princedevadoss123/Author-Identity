@@ -3,9 +3,9 @@ var insert_author = function(){
     var randomString = require('randomstring');
     for (i=0;i<30;i++){
         var fullname = randomString.generate({
-          length = 10,
-          charset : alphabetic,
-          capitalisation : lowercase,
+          length : 10,
+          charset : 'alphabetic',
+          capitalization : 'lowercase',
           readable : true
         });
         var mail = fullname + "@gmail.com"
