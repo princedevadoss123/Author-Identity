@@ -1,17 +1,18 @@
 var author = require('../models/author.js');
 
 var validate_author = function(req,res){
-author.findOne({email : req.query.email},function(err,author){
-    stat = false;
+author.findOne({author_id : req.query.id},function(err,author){
+    var status = 'failure';
     if(err != null){
         console.log(err);
     }
-    console.log(req.body.email);
     console.log(author);
     if(author != null){
-        stat = true;
+        if(author.email == req.query.email){
+        status = 'success';
+        }
     }
-    res.json({author : author});
+    res.json({message : status});
 });
 }
 

@@ -4,7 +4,7 @@ module.exports = function(request, response, next) {
         response.sendStatus(401);
     }
     else {
-        if(request.token === process.env.CARD_BEARER_TOKEN) {
+        if(request.token === process.env.AUTHOR_BEARER_TOKEN) {
             console.log('Got Authorized');
             next();
         }
