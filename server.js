@@ -13,6 +13,5 @@ app.use(bodyParser.json());
 app.use(bearerToken());
 app.listen(port);
 mongoose.connect(db.url);
-controller.insert_author();
 console.log(process.env.CARD_BEARER_TOKEN);
 routing.route(app);

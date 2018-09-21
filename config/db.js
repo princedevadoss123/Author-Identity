@@ -1,1 +1,1 @@
-module.exports.url = 'mongodb://psycho97:akilan0306@ds127892.mlab.com:27892/author' ;
+module.exports.url = 'mongodb://localhost:27017/author' ;
